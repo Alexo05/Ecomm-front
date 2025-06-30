@@ -1,0 +1,1013 @@
+
+.pagination{
+	text-align: center;
+  }
+.pagination a{
+	color: #060714;
+	text-decoration: none;
+	padding: 8px 15px;
+	display: inline-block;
+}
+
+.pagination a.active{
+	background-color: #0d6efd;
+	font-weight: bold;
+	border-radius: 3px;
+    
+}
+
+.pagination a:hover:not(.active){
+	background-color: #AAAAAA;
+	border-radius: 3px;
+}
+
+button {
+	border: none;
+  }
+  
+  .c-button {
+	background: linear-gradient(140deg, rgba(75, 118, 200, 1) 0%, rgba(31, 70, 145, 1) 100%);
+	border-radius: 45px;
+	font-size: 25px;
+	text-align: left;
+	padding: 11px 0px 11px 0px;
+	border: 4px solid rgb(37, 37, 37) !important;
+	border-style: outset;
+	box-shadow: -6px -5px 18px rgba(255, 255, 255, 0.1);
+	cursor: pointer;
+  }
+  
+  .c-button .c-main {
+	border-radius: 45px;
+	color: rgba(255, 255, 255, 1);
+	padding: 11px 25px 11px 2px;
+	box-shadow: inset 0px 0px 5px rgba(17, 17, 17, 0);
+	transition: all 0.5s ease-in-out;
+	border: 1px solid transparent;
+  }
+  
+  .c-ico .c-blur {
+	background: linear-gradient(318deg, rgba(75, 118, 200, 1) 0%, rgba(31, 70, 145, 1) 100%);
+	border-radius: 100%;
+	margin-left: 0;
+	padding: 8px 23px;
+	filter: blur(1px);
+	text-align: center;
+  }
+  
+  .c-ico {
+	position: relative;
+	margin-right: 20px;
+  }
+  
+  .c-ico .ico-text {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+  }
+  
+  /* Hovering */
+  
+  .c-button .c-main:hover {
+	box-shadow: inset 0px 0px 5px rgba(17, 17, 17, 0.6);
+	border: 1px solid rgba(26, 26, 26,0.5);
+	color: rgba(255, 255, 255, 0.5);
+  }
+  /* Styles for the popup and button */
+.view-modal {
+    color: #111310;
+    font-size: 18px;
+    padding: 10px 25px;
+    background: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}
+
+.popup {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    transform: translate(-50%, -50%) scale(1.2);
+    transition: top 0.2s ease-in-out, opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+.popup.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup header {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ebedf9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup header .close {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center; /* Centers the pagination in the middle of the page */
+    list-style: none;
+    padding: 0;
+    margin: 20px 0; /* Adjust margin as needed */
+  }
+  
+  .pagination li {
+    margin: 0 5px; /* Adjust spacing between pagination items */
+  }
+  
+  .pagination a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #0d6efd;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .pagination a:hover {
+    background-color: #f0f0f0;
+    color: #0056b3;
+  }
+  
+  .pagination a.active {
+    background-color: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+  }
+  
+  .pagination a.disabled {
+    color: #ccc;
+    pointer-events: none; /* Disables click events */
+    border-color: #ddd;
+  }
+
+  /* Dropdown Button */
+.dropbtn {
+  background-color: #0d6efd;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+  
+ul.breadcumb {
+  padding: 0 10%;
+  margin: 4rem 0;
+  list-style: none;
+  display: flex;
+}
+ul.breadcumb li,
+ul.breadcumb li a {
+  font-family: 'Poppins-300';
+  font-size: 1.1rem;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #333333;
+  text-decoration: none;
+}
+ul.breadcumb li:not(:last-child):after {
+ content: '>';
+ margin-left: 5px;
+}
+ul.breadcumb li.active {
+  font-family: 'Poppins-600';
+  color: #9D3840 !important;
+}
+
+section.product {
+  display: grid;
+  grid-template-columns: 39% 59%;
+  gap: 2%;
+}
+.product .box-img,
+.slide-product ul li {
+  width: 100%;
+  background-color: #F5F5F5;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.product .box-img img {
+  height: 340px;
+  margin: 0 auto;
+  display: block;
+  padding: 2rem 1rem;
+  max-width: 80%;
+  object-fit: contain;
+  cursor: pointer;
+}
+.slide-product ul {
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  padding: 0;
+  list-style: none;
+  gap: 2%;
+}
+.slide-product ul li img {
+  width: auto;
+  height: 80px;
+  margin: 0 auto;
+  display: block;
+  padding: 1rem;
+  cursor: pointer;
+  max-width: 80%;
+}
+.content-product h1 {
+  font-family: 'Poppins-800';
+  font-weight: 800;
+  font-size: 1.875rem;
+  line-height: 36px;
+  color: #2C5499;
+  margin-bottom: 1rem;
+}
+.content-product p,.content-product li {
+  font-family: 'Poppins-300';
+  font-size: 1rem;
+  line-height: inherit;
+  color: #333333;
+  margin-bottom: 2rem;
+}
+.items {
+  display: grid;
+  grid-template-columns: 35% 61%;
+  column-gap: 2%;
+  row-gap: 6%;
+}
+.content-product h2 {
+  font-family: 'Poppins-700';
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 26px;
+  color: #333333;
+}
+.content-product li{
+  margin: 0;
+}
+.content-product ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.items .item:not(:last-child):before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 78%;
+  background-color: #333;
+  right: 32px;
+  transform: translateY(-50%);
+  top: 50%;
+}
+.items .item:nth-child(2n):before {
+  display: none;
+}
+.items .item{
+  position: relative;
+}
+.items .item img {
+  width: 40px;
+  margin: 1rem 0;
+  height: 40px;
+}
+.btn-red {
+  background: #9D3840;
+  border-radius: 50px;
+  font-family: 'Poppins-300';
+  font-size: .8rem;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 0.6rem 1.5rem;
+  margin-top: 1rem;
+  display: block;
+  width: max-content;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-red:hover {
+  background: #2C5499;
+}
+.slide-product ul li.active {
+  opacity: .7;
+  z-index: -1;
+}
+span.price {
+  font-family: 'Poppins-700';
+  color: #9d3840;
+  display: block;
+  margin-bottom: 0.6rem;
+  font-size: 1.6rem;
+}
+.content-product p.heading {
+  font-family: 'Poppins-600';
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  color: #2C5499;
+}
+.text-pre-wrap{
+  white-space: pre-wrap;
+}
+.mb-1 {
+  margin-bottom: 8px;
+}
+.prevContainer,
+.nextContainer {
+  position: absolute;
+  top: 50%;
+  background-color: rgb('#9D3840');
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nextContainer {
+  right: 11px;
+}
+.prevContainer {
+  left: 11px;
+}
+.prevContainer svg,
+.nextContainer svg{
+  width: 22px;
+  height: 21px;
+  fill: #fff;
+}
+/**
+*
+*Popup
+*
+**/
+.popup {
+  width: 50%;
+  margin: 0 auto;
+  position: fixed;
+  left: 25%;
+  top: 3%;
+  background-color: #fff;
+  padding: 3rem;
+  display: none;
+  z-index: 1;
+}
+.popup.open {
+  display: block;
+  -webkit-animation: slide-top-50 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-top-50 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  z-index: 9;
+}
+html.open body:before {
+  content: '';
+  background-color: #0e192c91;
+  width: 100%;
+  height: 467%;
+  position: absolute;
+  z-index: 1;
+}
+
+.close {
+  width: 30px;
+  height: 30px;
+  background-color: #9D3840;
+  float: right;
+  margin-top: -35px;
+  margin-right: -31px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.close img {
+  width: 10px;
+  height: 10px;
+}
+
+html.open,
+html.open body {
+  overflow: hidden;
+}
+
+/**
+* ----------------------------------------
+* animation slide-top
+* ----------------------------------------
+*/
+@-webkit-keyframes slide-top-50 {
+  0% {
+      -webkit-transform: translateY(50%);
+      transform: translateY(50%);
+  }
+
+  100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+  }
+}
+
+@keyframes slide-top-50 {
+  0% {
+      -webkit-transform: translateY(50%);
+      transform: translateY(50%);
+  }
+
+  100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+  }
+}
+img.demo-img {
+  width: 100%;
+}
+.alert-info {
+  font-family: 'Poppins-300';
+  color: #055160;
+  background-color: #cff4fc;
+  border-color: #b6effb;
+  position: relative;
+  padding: 1rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  margin: 1rem 0;
+}
+/** Media Query **/
+
+@media(max-width:1200px){
+  section.product {
+      grid-template-columns: 100%;
+  }
+  .btn-red {
+      font-size: 0.875rem;
+      padding: 0.6rem 2rem;
+  }
+  .slide-product ul li img {
+      max-width: 70%;
+      object-fit: contain;
+  }
+}
+@media(max-width:767px){
+  .items {
+      grid-template-columns: 49% 49%;
+  }
+  .btn-red {
+      margin-top: 3rem;
+  }
+}
+@media(max-width:576px){
+  .items {
+      grid-template-columns: 100%;
+  }
+  .items .item:not(:last-child):before{
+      display: none;
+  }
+  .prevContainer,
+  .nextContainer {
+      top: auto;
+      bottom: 13px;
+  }
+}
+@media(max-width:991px) {
+  .popup {
+      width: fit-content;
+      left: auto;
+      right: auto;
+  }
+}
+.breadcrumb {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb li + li:before {
+  content: '>>';
+  padding: 0 0.5rem;
+  color: #6c757d;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+  color: #0056b3;
+}
+
+.breadcrumb .active {
+  color: #000000;
+  font-weight: bold;
+}
+
+.breadcrumb li + li:before {
+  content: '>';
+  padding: 0 0.5rem;
+  color: #6c757d;
+}
+
+.pagination{
+	text-align: center;
+  
+  }
+.pagination a{
+	color: #060714;
+	text-decoration: none;
+	padding: 8px 15px;
+	display: inline-block;
+}
+
+.pagination a.active{
+	background-color: #0d6efd;
+	font-weight: bold;
+	border-radius: 3px;
+    
+}
+
+.pagination a:hover:not(.active){
+	background-color: #AAAAAA;
+	border-radius: 3px;
+}
+
+button {
+	border: none;
+  }
+  
+  .c-button {
+	background: linear-gradient(140deg, rgba(75, 118, 200, 1) 0%, rgba(31, 70, 145, 1) 100%);
+	border-radius: 45px;
+	font-size: 25px;
+	text-align: left;
+	padding: 11px 0px 11px 0px;
+	border: 4px solid rgb(37, 37, 37) !important;
+	border-style: outset;
+	box-shadow: -6px -5px 18px rgba(255, 255, 255, 0.1);
+	cursor: pointer;
+  }
+  
+  .c-button .c-main {
+	border-radius: 45px;
+	color: rgba(255, 255, 255, 1);
+	padding: 11px 25px 11px 2px;
+	box-shadow: inset 0px 0px 5px rgba(17, 17, 17, 0);
+	transition: all 0.5s ease-in-out;
+	border: 1px solid transparent;
+  }
+  
+  .c-ico .c-blur {
+	background: linear-gradient(318deg, rgba(75, 118, 200, 1) 0%, rgba(31, 70, 145, 1) 100%);
+	border-radius: 100%;
+	margin-left: 0;
+	padding: 8px 23px;
+	filter: blur(1px);
+	text-align: center;
+  }
+  
+  .c-ico {
+	position: relative;
+	margin-right: 20px;
+  }
+  
+  .c-ico .ico-text {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+  }
+  
+  /* Hovering */
+  
+  .c-button .c-main:hover {
+	box-shadow: inset 0px 0px 5px rgba(17, 17, 17, 0.6);
+	border: 1px solid rgba(26, 26, 26,0.5);
+	color: rgba(255, 255, 255, 0.5);
+  }
+  /* Styles for the popup and button */
+.view-modal {
+    color: #111310;
+    font-size: 18px;
+    padding: 10px 25px;
+    background: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}
+
+.popup {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    transform: translate(-50%, -50%) scale(1.2);
+    transition: top 0.2s ease-in-out, opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+.popup.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup header {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ebedf9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popup header .close {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center; /* Centers the pagination in the middle of the page */
+    list-style: none;
+    padding: 0;
+    margin: 20px 0; /* Adjust margin as needed */
+  }
+  
+  .pagination li {
+    margin: 0 5px; /* Adjust spacing between pagination items */
+  }
+  
+  .pagination a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #0d6efd;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .pagination a:hover {
+    background-color: #f0f0f0;
+    color: #0056b3;
+  }
+  
+  .pagination a.active {
+    background-color: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+  }
+  
+  .pagination a.disabled {
+    color: #ccc;
+    pointer-events: none; /* Disables click events */
+    border-color: #ddd;
+  }
+
+  /* Dropdown Button */
+.dropbtn {
+  background-color: #0d6efd;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #166aca;}
+  
+
+/* Ensures the container has padding for spacing */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+/* Individual columns with padding */
+.col-sm-6, .col-md-4, .col-lg-3 {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 30px; /* Adds space between rows */
+}
+
+/* Box class for the product cards */
+.box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Ensure all boxes have the same height */
+  padding: 15px;
+}
+
+/* Image container */
+.img-box {
+  width: 100%;
+  padding-top: 100%; /* Makes the img-box a square */
+  position: relative;
+}
+
+.img-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the img-box */
+}
+
+/* Detail box for product details */
+.detail-box {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.detail-box h5 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.detail-box h6 {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Options for add to cart */
+.options {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.options .option1 {
+  background-color: #0d6efd;
+  border: 1px solid #ffffff;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.options .option1:hover {
+  background-color: #2e3033;
+}
+
+/* Styles for the popup and button */
+.view-modal {
+  color: #111310;
+  font-size: 18px;
+  padding: 10px 25px;
+  background: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+.popup {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  transform: translate(-50%, -50%) scale(1.2);
+  transition: top 0.2s ease-in-out, opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+.popup.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup header {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ebedf9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup header .close {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center; /* Centers the pagination in the middle of the page */
+  list-style: none;
+  padding: 0;
+  margin: 20px 0; /* Adjust margin as needed */
+}
+
+.pagination li {
+  margin: 0 5px; /* Adjust spacing between pagination items */
+}
+
+.pagination a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #0d6efd;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+  background-color: #f0f0f0;
+  color: #0056b3;
+}
+
+.pagination a.active {
+  background-color: #0d6efd;
+  color: white;
+  border-color: #0d6efd;
+}
+
+.pagination a.disabled {
+  color: #ccc;
+  pointer-events: none; /* Disables click events */
+  border-color: #ddd;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #0d6efd;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #166aca;
+}
+
+.no-products-message {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  color: #777;
+}
+
+
+
+
+
+

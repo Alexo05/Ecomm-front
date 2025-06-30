@@ -1,0 +1,59 @@
+
+      <!-- inner page section -->
+      <section class="inner_page_head">
+        <div class="container_fuild">
+           <div class="row">
+              <div class="col-md-12">
+                 <div class="full">
+                    <h3> Register </h3>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </section>
+     <!-- end inner page section -->
+     <!-- why section -->
+     <section class="why_section layout_padding">
+        <div class="container">
+           <div class="row">
+              <div class="col-lg-8 offset-lg-2">
+                 <div class="full">
+                    <form [formGroup]="form" (ngSubmit)="submit()">
+                       <fieldset>
+                          <input formControlName="firstName" type="text" placeholder="Enter your FirstName" name="firstName" required />
+                           <div *ngIf="f['firstName'].touched && f['firstName'].invalid" class="alert alert-danger">
+                              <div *ngIf="f['firstName'].errors != null && f['firstName'].errors['required']">Prénom obligatoire.</div>
+                           </div>
+
+                          <input formControlName="lastName" type="text" placeholder="Enter your LastName" name="lastName" required />
+                          <div *ngIf="f['lastName'].touched && f['lastName'].invalid" class="alert alert-danger">
+                              <div *ngIf="f['lastName'].errors != null && f['lastName'].errors['required']">Nom obligatoire.</div>
+                           </div>
+
+                          <input formControlName="phoneNumber" type="number" placeholder="Enter your PhoneNumber" name="phoneNumber" required />
+                          <div *ngIf="f['phoneNumber'].touched && f['phoneNumber'].invalid" class="alert alert-danger">
+                              <div *ngIf="f['phoneNumber'].errors != null && f['phoneNumber'].errors['required']">Numéro de téléphone obligatoire.</div>
+                           </div>
+
+                          <input formControlName="email" type="email" placeholder="Enter your email address" name="email" required />
+                          <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+                              <div *ngIf="f['email'].errors != null && f['email'].errors['required']">Email obligatoire.</div>
+                           </div>
+
+                          <input formControlName="password" type="password" placeholder="Enter your password " name="password" required />
+                          <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">
+                              <div *ngIf="f['password'].errors != null && f['password'].errors['required']">Mot de passe obligatoire.</div>
+                           </div>
+
+                          <input type="submit" value="Register" />
+
+                          
+                       </fieldset>
+                    </form>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </section>
+     <!-- end why section -->
+    

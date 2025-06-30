@@ -1,0 +1,64 @@
+<br>
+ <!-- Breadcrumb -->
+ <div *ngIf="categoryPageDto">
+  <ul class="breadcrumb">
+    <li><a routerLink="/allProducts">Catégories</a></li>
+        <ng-container *ngFor="let breadcrumb of categoryPageDto.breadcrumbDTO; let last = last">
+      <li *ngIf="!last">
+        <a [routerLink]="[breadcrumb.url]">{{ breadcrumb.categoryLabel }}</a>
+      </li>
+      <li *ngIf="last" class="active" style="color: #000000;">
+         {{ breadcrumb.categoryLabel }}
+      </li>
+    </ng-container>
+  </ul>
+</div>
+
+    
+  
+<div *ngIf="categoryPageDto.products">
+  <section class="product_section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Our <span>Products</span>
+        </h2>
+      </div>
+      <div *ngIf="categoryPageDto.products.length > 0; else noProducts">
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let product of categoryPageDto.products">
+            <div class="box" (click)="gotToProduct(product.slug)">
+              
+              <div class="img-box">
+                <img [src]="product.imageUrl" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  {{ product.label }}
+                </h5>
+                <h6>
+                  {{ product.price }} $
+                </h6>
+                
+                </div>
+                <div class="options">
+                  <a class="option1" (click)="addToCart(product)">
+                    Add To Cart
+                  </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<ng-template #noProducts>
+  <div class="no-products-message">
+    No products available.
+  </div>
+</ng-template>
+
+
+  

@@ -1,0 +1,34 @@
+<section>
+    <h1>Mes commandes</h1>
+    <div th:if="${param.payment_succeeded != null}" class="alert-success">
+    </div>
+    <div class="table">
+        <div class="header">
+            <b>Date de commande</b>
+            <b>Total Price</b>
+            <div>
+                <div>
+                    <b>Nom d'article</b>
+                    <b>Prix</b>
+                    <b>Quantité</b>
+                </div>
+            </div>
+        </div>
+        <div class="columns" th:each="order :${page.elements}">
+            <p th:text="${#dates.format(order.date, 'dd-MM-yyyy HH:mm')}" class="date"></p>
+            <p th:text="${order.totalPrice+' €'}" class="price"></p>
+            <div th:each="item:${order.items}">
+                <p th:text="${item.label}"></p>
+                <p th:text="${#numbers.formatDecimal(item.price, 1, 2)+' €'}"></p>
+                <p th:text="${item.qty}"></p>
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <div th:if="${page.elements == null || page.elements.size() == 0 && page.totalElements == 0}"
+             class="empty-message">
+             Aucune commande trouvée.
+        </div>
+        
+    </div>
+</section>
