@@ -27,6 +27,7 @@ export class PayamentComponent {
   submitPayment() {
     if (this.paymentForm.valid) {
       console.log('Payment info:', this.paymentForm.value);
+      console.log(this.tokenStorage.getEmail());
       this.http.post('http://localhost:9091/order/create', {clientName: this.tokenStorage.getEmail(), totalAmount: this.totalPrice })
       .subscribe(() => {
         

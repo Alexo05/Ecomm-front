@@ -39,7 +39,7 @@ export class RegisterComponent implements OnInit{
                 this.isLoginFailed = false;
                 this.isLoggedIn = true;
                 this.userLoggedIn = <string>this.tokenStorage.getEmail();
-                this.router.navigateByUrl('/index');
+                this.router.navigateByUrl('/login');
           },
           error: (err) => {
             this.errorMessage = err.error.message;
